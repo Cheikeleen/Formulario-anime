@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../CSS/CSSWEB.css">
+        <script src="../Javascript/Javascript.js" defer></script>
+    </head>
+    <body>
+        <header><img src="../IMG/3fbbdd0a95a3cdebff201d9aa6a09231.jpg"></header>
+        <nav>
+            <ul class="menu">
+                <li><a href="Página web.html">Página web</a></li>
+                <li><a href="Naruto.html">Naruto</a></li>
+                <li><a href="Code Geass.html">Code Geass</a></li>
+                <li><a href="Vinland.html">Vinland Saga</a></li>
+            </ul>
+            <p>Cheikh Saadibou Hanne Cisse</p> 
+        </nav>
+        <section>  
+            <form action="recogedatos.php" method="post">
+                <fieldset>
+                    <legend>Información del usuario</legend>
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" maxlength="10" pattern="[A-Za-z]+" required title="Solo se permiten caracteres alfabéticos.">
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required title="Debe ingresar 9 dígitos.">
+
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    <label for="opciones">Personajes favoritos:</label>
+                    <select id="opciones" name="opciones[]" multiple size="4" required>
+                        <option value="Naruto">Hyakkimaru</option>
+                        <option value="Sasuke">Dororo</option>
+                        <option value="Itachi">Daigo Kagemitsu</option>
+                        <option value="Minato">Biwa Hōshi</option>
+                        <option value="Shikamaru">Mio</option>
+                        <option value="Pain">Jukai</option>
+                    </select>
+
+                    <label for="numero">Puntuación del anime:</label>
+                    <input type="number" id="numero" name="numero" min="0" max="10" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Peor parte del anime</legend>
+                    <label><input type="radio" name="peor_parte" value="Personajes"> Personajes</label>
+                    <label><input type="radio" name="peor_parte" value="Trama"> Trama</label>
+                    <label><input type="radio" name="peor_parte" value="Historia"> Historia</label>
+                    <label><input type="radio" name="peor_parte" value="Construcción de mundo"> Construcción de mundo</label>
+                </fieldset>
+
+                <button type="button" onclick="mostrarAlerta()">Registrar</button>
+            </form>
+        </section>
+        <article></article>
+
+    </body>
+</html>

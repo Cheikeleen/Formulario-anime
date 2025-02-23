@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../CSS/CSSWEB.css">
+        <script src="../Javascript/Javascript.js" defer></script>
+    </head>
+    <body>
+        <header id="Naruto"><img src="../IMG/Vinland.jpg"></header>
+        <nav>
+            <ul class="menu">
+                <li><a href="Página web.html">Página web</a></li>
+                <li><a href="Code Geass.html">Code Geass</a></li>
+                <li><a href="Dororo.html">Dororo</a></li>
+                <li><a href="Naruto.html">Naruto</a></li>
+            </ul>
+            <p>Cheikh Saadibou Hanne Cisse</p> 
+        </nav>
+        <section>  
+            <form action="recogedatos.php" method="post">
+                <fieldset>
+                    <legend>Información del usuario</legend>
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" maxlength="10" pattern="[A-Za-z]+" required title="Solo se permiten caracteres alfabéticos.">
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required title="Debe ingresar 9 dígitos.">
+
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    <label for="opciones">Personajes favoritos:</label>
+                    <select id="opciones" name="opciones[]" multiple size="4" required>
+                        <option value="Thorfinn Karlsefni">Thorfinn Karlsefni</option>
+                        <option value="Lucius Artorius Castus">Lucius Artorius Castus(Askeladd)</option>
+                        <option value="Thors Snorresson">Thors Snorresson</option>
+                        <option value="Canute Sveinsson">Canute Sveinsson</option>
+                        <option value="Floki">Floki</option>
+                        <option value="Bjorn">Bjorn</option>
+                    </select>
+
+                    <label for="numero">Puntuación del anime:</label>
+                    <input type="number" id="numero" name="numero" min="0" max="10" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Peor parte del anime</legend>
+                    <label><input type="radio" name="peor_parte" value="Personajes"> Personajes</label>
+                    <label><input type="radio" name="peor_parte" value="Trama"> Trama</label>
+                    <label><input type="radio" name="peor_parte" value="Historia"> Historia</label>
+                    <label><input type="radio" name="peor_parte" value="Construcción de mundo"> Construcción de mundo</label>
+                </fieldset>
+
+                <button type="button" onclick="mostrarAlerta()">Registrar</button>
+            </form>
+        </section>
+        <article></article>
+
+    </body>
+</html>
